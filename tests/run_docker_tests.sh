@@ -5,7 +5,7 @@
 cd $(dirname $0)/..
 base=$(pwd)
 
-image="textract/ubuntu12.04"
+image="extratextract/ubuntu12.04"
 
 cp tests/Dockerfile ./Dockerfile
 
@@ -13,7 +13,7 @@ cp tests/Dockerfile ./Dockerfile
 # change and the existing image is outdated, just delete it with:
 # docker rmi <image name>
 docker images | grep $image || docker build -t $image .
-docker run --rm -v $base:/home/textract/src $image
+docker run --rm -v $base:/home/extratextract/src $image
 
 rm ./Dockerfile
 

@@ -2,7 +2,7 @@ import glob
 import os
 from setuptools import setup
 
-import textract
+import extratextract
 
 # get all of the scripts
 scripts = glob.glob("bin/*")
@@ -11,7 +11,7 @@ scripts = glob.glob("bin/*")
 with open("README.rst") as stream:
     long_description = stream.read()
 
-github_url = 'https://github.com/deanmalmgren/textract'
+github_url = 'https://github.com/ooduor/extratextract'
 
 
 def parse_requirements(requirements_filename):
@@ -41,9 +41,9 @@ dependencies, dependency_links = parse_requirements(requirements_filename)
 
 
 setup(
-    name=textract.__name__,
-    version="1.6.5",
-    description="extract text from any document. no muss. no fuss.",
+    name=extratextract.__name__,
+    version="1.7.0",
+    description="extract text from any document. no muss. no fuss. just extra.",
     long_description=long_description,
     url=github_url,
     download_url="%s/archives/master" % github_url,
@@ -52,8 +52,8 @@ setup(
     license='MIT',
     scripts=scripts,
     packages=[
-        'textract',
-        'textract.parsers',
+        'extratextract',
+        'extratextract.parsers',
     ],
     install_requires=dependencies,
     extras_require={

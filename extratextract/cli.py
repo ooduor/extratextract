@@ -80,7 +80,7 @@ def get_parser():
         help=(
             'Add arbitrary options to various parsers of the form '
             'KEYWORD=VALUE. A full list of available KEYWORD options is '
-            'available at http://bit.ly/textract-options'
+            'available at http://bit.ly/extratextract-options'
         ),
     )
     parser.add_argument(

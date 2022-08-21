@@ -1,11 +1,11 @@
-# This file is used to create standardized text for any textract method that
+# This file is used to create standardized text for any extratextract method that
 # uses any command line utility or third party service (as opposed to a pure
 # python package) for text extraction. These types of extraction methods have
 # made it particularly difficult to maintain reasonably stable testing
 # environments, so this provides a useful workaround to validate that the
 # extraction methods are working correctly across all development environments
 #
-# https://github.com/deanmalmgren/textract/issues/78
+# https://github.com/deanmalmgren/extratextract/issues/78
 
 TARGETS = pdf/ocr_text.txt \
 	png/raw_text.txt png/standardized_text.txt \

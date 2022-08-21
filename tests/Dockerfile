@@ -8,9 +8,9 @@ ADD . /src
 WORKDIR /src
 RUN /bin/bash /src/provision/debian.sh
 RUN /bin/bash /src/provision/python.sh
-RUN adduser --disabled-password --gecos "" --home=/home/textract textract
-VOLUME ["/home/textract/src"]
-ENV PATH $PATH:/home/textract/src/bin
-ENV PYTHONPATH /home/textract/src
-USER textract
-ENTRYPOINT ["/home/textract/src/tests/run.py"]
+RUN adduser --disabled-password --gecos "" --home=/home/extratextract extratextract
+VOLUME ["/home/extratextract/src"]
+ENV PATH $PATH:/home/extratextract/src/bin
+ENV PYTHONPATH /home/extratextract/src
+USER extratextract
+ENTRYPOINT ["/home/extratextract/src/tests/run.py"]
