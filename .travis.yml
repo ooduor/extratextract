@@ -3,7 +3,6 @@ os: linux
 
 language: python
 python:
-  - "2.7"
   - "3.7"
   - "3.10"
 
@@ -19,8 +18,8 @@ install:
   - if [[ $TRAVIS_PYTHON_VERSION == 3.7 ]];
         then ./provision/python3.sh;
         fi
-  - if [[ $TRAVIS_PYTHON_VERSION == 2.7 ]];
-        then ./provision/python2.sh;
+  - if [[ $TRAVIS_PYTHON_VERSION == 3.10 ]];
+        then ./provision/python3.sh;
         fi
   - pip install .[pocketsphinx]
 
